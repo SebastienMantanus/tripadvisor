@@ -396,9 +396,9 @@ footer img {
     margin: 30px auto;
     margin-top: 40px;
   }
-  .mainMenuItems ul li {
-    min-width: 275px;
-  }
+  /* .mainMenuItems ul li {
+      min-width: 275px;
+    } */
 
   .mainMenuItems ul li:nth-child(6) {
     display: inherit;
