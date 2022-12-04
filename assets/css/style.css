@@ -278,6 +278,8 @@ catSection > carousel {
   flex-wrap: nowrap;
   overflow: hidden;
   overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
 }
 catSection > carousel > ul {
   display: flex;
