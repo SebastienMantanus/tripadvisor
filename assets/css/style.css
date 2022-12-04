@@ -86,6 +86,13 @@ main {
   color: #333333;
 }
 
+main > menu {
+  background-color: #ffffff;
+  /* box-shadow: 10px 5px 5px red; */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
 .mainMenuItems {
   margin: 30px 0px;
 }
@@ -128,6 +135,22 @@ imageCarousel {
 
 imageCarousel > div:first-child {
   flex: 1;
+  position: relative;
+}
+
+imageCarousel > div:first-child > div {
+  position: absolute;
+  width: 127px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: black;
+  left: 25px;
+  top: 380px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 11px;
+  box-sizing: border-box;
 }
 
 imageCarousel > div:last-child {
@@ -254,6 +277,7 @@ catSection > leftdiv {
   flex: 1;
   margin-right: 40px;
 }
+
 catSection h3 {
   margin-top: 35px;
 }
@@ -426,11 +450,18 @@ footer img {
   mainSection > div2 {
     display: none;
   }
+  mainSection > div {
+    width: 100%;
+  }
+
+  catSection > leftdiv {
+    min-width: 250px;
+  }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   header {
     background-color: red;
     width: 100%;
   }
-}
+} */
