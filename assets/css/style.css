@@ -121,20 +121,32 @@ main {
 
 imageCarousel {
   display: flex;
+  gap: 2px;
+  width: 100%;
+  height: 430px;
 }
 
-.mainLeftImage {
-  object-fit: cover;
-  width: 650px;
-  padding-right: 2px;
-  height: 423px;
+imageCarousel > div:first-child {
+  flex: 1;
 }
-.mainRightImages {
-  object-fit: cover;
-  margin: 0px;
-  padding: 0px;
+
+imageCarousel > div:last-child {
+  display: flex;
+  gap: 2px;
+  box-sizing: border-box;
+  flex-direction: column;
   width: 480px;
-  height: 210px;
+  height: 100%;
+}
+
+imageCarousel > div:last-child > div {
+  height: calc((100% - 2px) / 2);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 underCarousel {
@@ -152,7 +164,7 @@ underCarousel {
 
 mainSection {
   margin-top: 40px;
-  width: 1140px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -393,12 +405,13 @@ footer img {
   }
   main {
     width: 100%;
-    margin: 30px auto;
-    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
   }
-  /* .mainMenuItems ul li {
-      min-width: 275px;
-    } */
+  .mainMenuItems ul li {
+    width: calc((100% - 30px) / 4);
+  }
 
   .mainMenuItems ul li:nth-child(6) {
     display: inherit;
@@ -406,6 +419,10 @@ footer img {
 
   .mainMenuItems ul li:nth-child(7) {
     display: inherit;
+  }
+
+  mainSection > div2 {
+    display: none;
   }
 }
 
