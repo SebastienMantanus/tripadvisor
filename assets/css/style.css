@@ -100,12 +100,10 @@ main > menu {
 .mainMenuItems ul {
   display: flex;
   /* justify-content: space-evenly; */
-
   gap: 10px;
   flex-wrap: wrap;
 }
 .mainMenuItems ul li {
-  /* margin: 0 5px; */
   box-sizing: border-box;
   width: 178px;
   display: flex;
@@ -298,6 +296,7 @@ catSection p {
 /* Carousel */
 
 catSection > carousel {
+  display: flex;
   margin-top: 35px;
   flex-wrap: nowrap;
   overflow: hidden;
@@ -426,9 +425,9 @@ footer img {
 
 @media (max-width: 1184px) {
   header {
-    background-color: red;
     width: 100%;
   }
+
   main {
     width: 100%;
     padding-left: 40px;
@@ -459,9 +458,65 @@ footer img {
   }
 }
 
-/* @media (max-width: 1024px) {
-  header {
+@media (max-width: 1024px) {
+  header > menu > ul > li > span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* header {
     background-color: red;
     width: 100%;
+  } */
+
+  header {
+    justify-content: center;
   }
-} */
+
+  .menuItems li {
+    display: none;
+  }
+
+  .logoPattern img {
+    text-align: center;
+  }
+
+  .mainMenuItems ul {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .mainMenuItems ul li {
+    min-width: fit-content;
+  }
+  .mainMenuItems ul li:nth-child(6) {
+    display: inherit;
+  }
+
+  .mainMenuItems ul li:nth-child(7) {
+    display: inherit;
+  }
+
+  imageCarousel > div:last-child {
+    display: none;
+  }
+
+  catSection {
+    display: block;
+  }
+  catSection > carousel {
+    display: flex;
+  }
+
+  main > h1 {
+    font-size: 32px;
+  }
+  .informationSubtitle {
+    font-family: "Ts-reg", sans-serif;
+    font-size: 14px;
+  }
+}
